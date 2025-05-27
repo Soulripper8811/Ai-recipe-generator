@@ -7,7 +7,6 @@ import connectDB from "./config/db.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import path from "path";
-import job from "./config/cron.js";
 
 dotnev.config();
 const __dirname = path.resolve();
