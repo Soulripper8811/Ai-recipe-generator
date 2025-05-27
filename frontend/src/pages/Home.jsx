@@ -1,7 +1,7 @@
 import { userContext } from "@/contexts/UserContext";
 import React, { useContext, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const { user } = useContext(userContext);

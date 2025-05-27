@@ -19,7 +19,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
-import { Link, useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import axiosInstance from "@/lib/axios";
 import { userContext } from "@/contexts/UserContext";

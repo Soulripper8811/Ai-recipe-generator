@@ -109,24 +109,3 @@ export const deleteRecipe = tryCatchWrapper(async (req, res) => {
     });
   }
 });
-
-const generateImage = tryCatchWrapper(async ({ name }) => {
-  const client = new InferenceClient("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");
-
-  const imageBlob = await client.textToImage({
-    provider: "hf-inference",
-    model: "stabilityai/stable-diffusion-3.5-large",
-    inputs: name,
-    parameters: { num_inference_steps: 5 },
-  });
-
-  const arrayBuffer = await imageBlob.arrayBuffer();
-  const buffer = Buffer.from(arrayBuffer);
-
-  const base64Image = buffer.toString("base64");
-  if (!base64Image) {
-    throw new ErrorResponse("Failed to convert image to base64", 500);
-  }
-
-  return `data:image/png;base64,${base64Image}`;
-});

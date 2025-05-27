@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router";
+import { useNavigate, useParams } from "react-router-dom";
 import axiosInstance from "@/lib/axios";
 import Markdown from "react-markdown";
 import { Button } from "@/components/ui/button";

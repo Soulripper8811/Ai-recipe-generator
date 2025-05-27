@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Button } from "./ui/button";
-import { Link, useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router-dom";
 import { userContext } from "@/contexts/UserContext";
 import axiosInstance from "@/lib/axios";
 import toast from "react-hot-toast";
