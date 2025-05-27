@@ -18,7 +18,7 @@ import {
 } from "../components/ui/select";
 import toast from "react-hot-toast";
 import axiosInstance from "@/lib/axios";
-import { Navigate, useNavigate } from "react-router";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const CreateForm = () => {
   const navigate = useNavigate();
