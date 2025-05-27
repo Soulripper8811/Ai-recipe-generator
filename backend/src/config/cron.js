@@ -1,6 +1,8 @@
 // cronJob.js
 import cron from "node-cron";
 import axios from "axios";
+import dotenv from "dotenv";
+dotenv.config();
 
 const job = cron.schedule(
   "*/14 * * * *",

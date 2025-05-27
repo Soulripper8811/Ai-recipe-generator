@@ -29,7 +29,7 @@ export const generateRecipe = tryCatchWrapper(async (req, res) => {
       },
     ],
   });
-  const client = new InferenceClient("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");
+  const client = new InferenceClient(process.env.HUGGING_FACE_API_KEY);
 
   const imageBlob = await client.textToImage({
     provider: "hf-inference",
