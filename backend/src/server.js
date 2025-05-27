@@ -27,11 +27,7 @@ if (process.env.NODE_ENV === "development") {
 app.use(cookieParser());
 app.use("/api/users", userRoutes);
 app.use("/api/recipes", recipeRoutes);
-app.get("/api/ping", () => {
-  res.send("pong");
-});
 
-job.start();
 //error midlleware
 app.use(errorHandler);
 if (process.env.NODE_ENV === "production") {
